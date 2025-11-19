@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mid-gray: #6b6b6b;
+    --mid-dark: #2a2a2a;
+    --mid-light: #e0e0e0;
+    --mid-accent: #888888;
+    --mid-bg: #f5f5f5;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background: var(--mid-bg);
+    color: var(--mid-dark);
+    line-height: 1.5;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+.logo {
+    font-size: 3.2rem;
+    font-weight: 300;
+    letter-spacing: 7px;
+    color: var(--mid-gray);
+    margin-bottom: 8px;
+    text-transform: lowercase;
+}
+
+.tagline {
+    font-size: 1.05rem;
+    color: var(--mid-accent);
+    font-weight: 300;
+    font-style: italic;
+}
+
+.hero {
+    margin-bottom: 25px;
+}
+
+.coin-display {
+    margin-bottom: 18px;
+}
+
+.coin {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.coin:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    font-size: 1.15rem;
+    color: var(--mid-dark);
+    max-width: 650px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.feature {
+    padding: 12px;
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--mid-gray);
+    margin-bottom: 6px;
+    text-transform: lowercase;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    color: var(--mid-accent);
+    font-weight: 300;
+}
+
+.cta {
+    margin-bottom: 18px;
+}
+
+.arrow-container {
+    margin-bottom: 12px;
+}
+
+.arrow-text {
+    font-size: 1.1rem;
+    color: var(--mid-dark);
+    font-weight: 300;
+    margin-bottom: 6px;
+    text-transform: lowercase;
+}
+
+.big-arrow {
+    font-size: 3rem;
+    color: var(--mid-gray);
+    line-height: 1;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.mid-button {
+    display: inline-block;
+    background: var(--mid-gray);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.mid-button:hover {
+    background: var(--mid-accent);
+    transform: translateY(-2px);
+}
+
+.mid-button:active {
+    transform: translateY(0);
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    color: var(--mid-accent);
+    font-style: italic;
+}
+
+footer {
+    padding-top: 18px;
+    border-top: 1px solid var(--mid-light);
+    color: var(--mid-accent);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+
+.coin-mentions {
+    margin-top: 12px;
+    font-size: 1.15rem;
+    color: var(--mid-accent);
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.twitter-promo {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.twitter-arrow-text {
+    font-size: 1.15rem;
+    color: var(--mid-dark);
+    font-weight: 300;
+    text-transform: lowercase;
+}
+
+.twitter-arrow {
+    font-size: 2.5rem;
+    color: var(--mid-gray);
+    line-height: 1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+.twitter-link-big {
+    font-size: 1.1rem;
+    color: var(--mid-gray);
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: lowercase;
+    padding: 8px 20px;
+    border: 2px solid var(--mid-gray);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.twitter-link-big:hover {
+    background: var(--mid-gray);
+    color: white;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+
+    .coin {
+        width: 150px;
+        height: 150px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
